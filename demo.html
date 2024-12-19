@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+<script src="tinyChartingToolsV1.js"></script>
+<script>
+
+function startload(){
+//let datas=[5000,5500,12000,2000,15000,2000,15000];
+let datas=[["data1 ",5000],["data2 ",5500],["data3 ",1234],["data4 ",2345],["data5 ",1200],["data6 ",3000],["data7 ",8000],["data8 ",4000],["data8 ",8000]];
+let o=new tinyChart(); 
+o.showDataChart("container1",datas,"column");
+o.showDataChart("container2",datas,"dotline");
+o.showDataChart("container3",datas,"line");
+o.showDataChart("container4",datas,"dot");
+o.showDataChart("container5",datas,"circle");
+}
+
+</script>
+</head>
+
+
+<body onload="startload();">
+<br/><br/><br/><br/>
+
+<div id="container1"></div>
+<div id="container2"></div>
+<div id="container3"></div>
+<div id="container4"></div>
+<div id="container5"></div>
+
+
+
+
+<!-- nothing -->
+<div style="z-index:10000;position:fixed;width:100%;height:40px;background:black;padding:12px;top:0px;">
+<a href="userguide.jpg" style="border:1px solid black;background-color:white;padding:8px;border-radius:8px;">User guide</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:white;">Download Library</span> <a style="color:red;" href="tinyChartingToolsV1.js" download>Javascript</a> &nbsp;&nbsp; <a style="color:red;" href="" download></a>
+</div>
+<div onclick="this.style.display='none';startload();" align="center" style="background-color:white;position:fixed;width:100%;height:100%;left:0;top:0;z-index:10000;">
+<div style="font-size:28px;height:10%;margin-top:20px;">Tiny Charting Tools</div>
+<div style="height:10%;margin-top:0px;">By Amir A</div>
+<img style="width:480px;height:400px;" src="background.jpg"/></div>
+<div onclick="startload();" style="color:white;cursor:pointer;background-color:red;position:fixed;right:0;bottom:0;border:2px solid black;padding:18px;">referesh</div>
+<!-- nothing -->
+</body>
+</html>
